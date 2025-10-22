@@ -1,0 +1,10 @@
+data/
+
+# Environments
+.venv
+
+results/
+
+logs/
+
+__pycache__

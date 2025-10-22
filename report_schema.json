@@ -1,0 +1,572 @@
+{
+  "properties": {
+    "vac": {
+      "default": null,
+      "description": "Unique VAC numeric identifier.",
+      "maximum": 3000,
+      "minimum": 300,
+      "title": "Vac",
+      "type": "integer"
+    },
+    "completed": {
+      "default": null,
+      "description": "Date the test was completed in ISO8601 format. Provided in USA format in the report.",
+      "format": "date",
+      "title": "Completed",
+      "type": "string"
+    },
+    "age": {
+      "default": null,
+      "description": "Patient age.",
+      "minimum": 0,
+      "title": "Age",
+      "type": "integer"
+    },
+    "sex": {
+      "default": null,
+      "description": "Sex of the patient, 'male' or 'female'.",
+      "title": "Sex",
+      "type": "string"
+    },
+    "education": {
+      "default": null,
+      "description": "Years of education.",
+      "minimum": 0,
+      "title": "Education",
+      "type": "integer"
+    },
+    "is_telephone_encounter": {
+      "default": false,
+      "description": "True if this a telephone encounter.",
+      "ge": 0,
+      "title": "Is Telephone Encounter",
+      "type": "boolean"
+    },
+    "moca_visuospatial_executive": {
+      "default": null,
+      "description": "Score for Visuospatial/Executive section (0-5).",
+      "maximum": 5,
+      "minimum": 0,
+      "title": "Moca Visuospatial Executive",
+      "type": "integer"
+    },
+    "moca_naming": {
+      "default": null,
+      "description": "Score for Naming section (0-3).",
+      "maximum": 3,
+      "minimum": 0,
+      "title": "Moca Naming",
+      "type": "integer"
+    },
+    "moca_attention": {
+      "default": null,
+      "description": "Score for Attention section (0-6).",
+      "maximum": 6,
+      "minimum": 0,
+      "title": "Moca Attention",
+      "type": "integer"
+    },
+    "moca_language": {
+      "default": null,
+      "description": "Score for Language section (0-3).",
+      "maximum": 3,
+      "minimum": 0,
+      "title": "Moca Language",
+      "type": "integer"
+    },
+    "moca_abstraction": {
+      "default": null,
+      "description": "Score for Abstraction section (0-2).",
+      "maximum": 2,
+      "minimum": 0,
+      "title": "Moca Abstraction",
+      "type": "integer"
+    },
+    "moca_delayed_recall": {
+      "default": null,
+      "description": "Score for Delayed Recall/Memory section (0-5).",
+      "maximum": 5,
+      "minimum": 0,
+      "title": "Moca Delayed Recall",
+      "type": "integer"
+    },
+    "moca_orientation": {
+      "default": null,
+      "description": "Score for Orientation section (0-6).",
+      "maximum": 6,
+      "minimum": 0,
+      "title": "Moca Orientation",
+      "type": "integer"
+    },
+    "moca_total_score": {
+      "default": null,
+      "description": "Total score for the MoCA test (0-30).",
+      "maximum": 30,
+      "minimum": 0,
+      "title": "Moca Total Score",
+      "type": "integer"
+    },
+    "moca_notes": {
+      "default": null,
+      "description": "Notes about MoCA.",
+      "title": "Moca Notes",
+      "type": "string"
+    },
+    "mmse_orientation": {
+      "default": null,
+      "description": "Score for Orientation to Time and Space.",
+      "maximum": 10,
+      "minimum": 0,
+      "title": "Mmse Orientation",
+      "type": "integer"
+    },
+    "mmse_registration": {
+      "default": null,
+      "description": "Score for Registration.",
+      "maximum": 3,
+      "minimum": 0,
+      "title": "Mmse Registration",
+      "type": "integer"
+    },
+    "mmse_attention_and_calculation": {
+      "default": null,
+      "description": "Score for Attention and Calculation.",
+      "maximum": 5,
+      "minimum": 0,
+      "title": "Mmse Attention And Calculation",
+      "type": "integer"
+    },
+    "mmse_recall": {
+      "default": null,
+      "description": "Score for Recall.",
+      "maximum": 3,
+      "minimum": 0,
+      "title": "Mmse Recall",
+      "type": "integer"
+    },
+    "mmse_language": {
+      "default": null,
+      "description": "Score for Language.",
+      "maximum": 8,
+      "minimum": 0,
+      "title": "Mmse Language",
+      "type": "integer"
+    },
+    "mmse_visual_construction": {
+      "default": null,
+      "description": "Score for Visual Construction/Copying.",
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Mmse Visual Construction",
+      "type": "integer"
+    },
+    "mmse_total_score": {
+      "default": null,
+      "description": "Total score for the MMSE test.",
+      "maximum": 30,
+      "minimum": 0,
+      "title": "Mmse Total Score",
+      "type": "integer"
+    },
+    "mmse_notes": {
+      "default": null,
+      "description": "Notes about MMSE.",
+      "title": "Mmse Notes",
+      "type": "string"
+    },
+    "cerad_encoding_trials": {
+      "default": null,
+      "description": "Scores for the three encoding trials (0-10).",
+      "items": {
+        "type": "integer"
+      },
+      "title": "Cerad Encoding Trials",
+      "type": "array"
+    },
+    "cerad_encoding_total": {
+      "default": null,
+      "description": "Total score for Encoding.",
+      "title": "Cerad Encoding Total",
+      "type": "integer"
+    },
+    "cerad_delayed_recall": {
+      "default": null,
+      "description": "Score for Delayed Recall (0-10).",
+      "maximum": 10,
+      "minimum": 0,
+      "title": "Cerad Delayed Recall",
+      "type": "integer"
+    },
+    "cerad_recognition_hits": {
+      "default": null,
+      "description": "Number of Recognition Hits (RH) (0-10).",
+      "maximum": 10,
+      "minimum": 0,
+      "title": "Cerad Recognition Hits",
+      "type": "integer"
+    },
+    "cerad_false_positives": {
+      "default": null,
+      "description": "Number of False Positives (FP) (0-10).",
+      "maximum": 10,
+      "minimum": 0,
+      "title": "Cerad False Positives",
+      "type": "integer"
+    },
+    "cerad_corrected_recognition_total": {
+      "default": null,
+      "description": "Corrected Recognition Total (RH-FP).",
+      "title": "Cerad Corrected Recognition Total",
+      "type": "integer"
+    },
+    "cerad_rapid_forgetting": {
+      "default": null,
+      "description": "Score for Rapid Forgetting.",
+      "title": "Cerad Rapid Forgetting",
+      "type": "integer"
+    },
+    "cerad_rapid_forgetting_words": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "default": null,
+      "description": "Encoded words subject to rapid forgetting, with number of how many times they were encoded.",
+      "title": "Cerad Rapid Forgetting Words",
+      "type": "object"
+    },
+    "trailsa_time_in_seconds": {
+      "default": null,
+      "description": "Time to complete the Trails A test in seconds.",
+      "minimum": 0,
+      "title": "Trailsa Time In Seconds",
+      "type": "number"
+    },
+    "trailsa_errors": {
+      "default": null,
+      "description": "Number of errors made during the Trails A test.",
+      "minimum": 0,
+      "title": "Trailsa Errors",
+      "type": "integer"
+    },
+    "trailsa_notes": {
+      "default": null,
+      "description": "Notes about Trails A.",
+      "title": "Trailsa Notes",
+      "type": "string"
+    },
+    "trailsb_time_in_seconds": {
+      "default": null,
+      "description": "Time to complete the Trails B test in seconds.",
+      "minimum": 0,
+      "title": "Trailsb Time In Seconds",
+      "type": "number"
+    },
+    "trailsb_errors": {
+      "default": null,
+      "description": "Number of errors made during the Trails B test.",
+      "minimum": 0,
+      "title": "Trailsb Errors",
+      "type": "integer"
+    },
+    "trailsb_notes": {
+      "default": null,
+      "description": "Notes about Trails B.",
+      "title": "Trailsb Notes",
+      "type": "string"
+    },
+    "letter_fluency_total": {
+      "default": null,
+      "description": "The total score for letter fluency.",
+      "minimum": 0,
+      "title": "Letter Fluency Total",
+      "type": "integer"
+    },
+    "letter_fluency_f_score": {
+      "default": null,
+      "description": "Score for letter F.",
+      "minimum": 0,
+      "title": "Letter Fluency F Score",
+      "type": "integer"
+    },
+    "letter_fluency_f_rule_breaks": {
+      "default": null,
+      "description": "Number of rule breaks for letter F.",
+      "minimum": 0,
+      "title": "Letter Fluency F Rule Breaks",
+      "type": "integer"
+    },
+    "letter_fluency_f_repetitions": {
+      "default": null,
+      "description": "Number of repetitions for letter F.",
+      "minimum": 0,
+      "title": "Letter Fluency F Repetitions",
+      "type": "integer"
+    },
+    "letter_fluency_a_score": {
+      "default": null,
+      "description": "Score for letter A.",
+      "minimum": 0,
+      "title": "Letter Fluency A Score",
+      "type": "integer"
+    },
+    "letter_fluency_a_rule_breaks": {
+      "default": null,
+      "description": "Number of rule breaks for letter A.",
+      "minimum": 0,
+      "title": "Letter Fluency A Rule Breaks",
+      "type": "integer"
+    },
+    "letter_fluency_a_repetitions": {
+      "default": null,
+      "description": "Number of repetitions for letter A.",
+      "minimum": 0,
+      "title": "Letter Fluency A Repetitions",
+      "type": "integer"
+    },
+    "letter_fluency_s_score": {
+      "default": null,
+      "description": "Score for letter S.",
+      "minimum": 0,
+      "title": "Letter Fluency S Score",
+      "type": "integer"
+    },
+    "letter_fluency_s_rule_breaks": {
+      "default": null,
+      "description": "Number of rule breaks for letter S.",
+      "minimum": 0,
+      "title": "Letter Fluency S Rule Breaks",
+      "type": "integer"
+    },
+    "letter_fluency_s_repetitions": {
+      "default": null,
+      "description": "Number of repetitions for letter S.",
+      "minimum": 0,
+      "title": "Letter Fluency S Repetitions",
+      "type": "integer"
+    },
+    "category_fluency_total": {
+      "default": null,
+      "description": "The total score for category fluency.",
+      "minimum": 0,
+      "title": "Category Fluency Total",
+      "type": "integer"
+    },
+    "category_fluency_animals_score": {
+      "default": null,
+      "description": "Score for Animals.",
+      "minimum": 0,
+      "title": "Category Fluency Animals Score",
+      "type": "integer"
+    },
+    "category_fluency_animals_rule_breaks": {
+      "default": null,
+      "description": "Number of rule breaks for Animals.",
+      "minimum": 0,
+      "title": "Category Fluency Animals Rule Breaks",
+      "type": "integer"
+    },
+    "category_fluency_animals_repetitions": {
+      "default": null,
+      "description": "Number of repetitions for Animals.",
+      "minimum": 0,
+      "title": "Category Fluency Animals Repetitions",
+      "type": "integer"
+    },
+    "category_fluency_vegetables_score": {
+      "default": null,
+      "description": "Score for Vegetables.",
+      "minimum": 0,
+      "title": "Category Fluency Vegetables Score",
+      "type": "integer"
+    },
+    "category_fluency_vegetables_rule_breaks": {
+      "default": null,
+      "description": "Number of rule breaks for Vegetables.",
+      "minimum": 0,
+      "title": "Category Fluency Vegetables Rule Breaks",
+      "type": "integer"
+    },
+    "category_fluency_vegetables_repetitions": {
+      "default": null,
+      "description": "Number of repetitions for Vegetables.",
+      "minimum": 0,
+      "title": "Category Fluency Vegetables Repetitions",
+      "type": "integer"
+    },
+    "category_fluency_fruits_score": {
+      "default": null,
+      "description": "Score for Fruits.",
+      "minimum": 0,
+      "title": "Category Fluency Fruits Score",
+      "type": "integer"
+    },
+    "category_fluency_fruits_rule_breaks": {
+      "default": null,
+      "description": "Number of rule breaks for Fruits.",
+      "minimum": 0,
+      "title": "Category Fluency Fruits Rule Breaks",
+      "type": "integer"
+    },
+    "category_fluency_fruits_repetitions": {
+      "default": null,
+      "description": "Number of repetitions for Fruits.",
+      "minimum": 0,
+      "title": "Category Fluency Fruits Repetitions",
+      "type": "integer"
+    },
+    "fluency_notes": {
+      "default": null,
+      "description": "Notes about fluency tests.",
+      "title": "Fluency Notes",
+      "type": "string"
+    },
+    "boston_naming_total_score": {
+      "default": null,
+      "description": "Total score out of 15.",
+      "maximum": 15,
+      "minimum": 0,
+      "title": "Boston Naming Total Score",
+      "type": "integer"
+    },
+    "boston_naming_missed": {
+      "default": null,
+      "description": "Number of missed items.",
+      "minimum": 0,
+      "title": "Boston Naming Missed",
+      "type": "integer"
+    },
+    "boston_naming_semantic_cues": {
+      "default": null,
+      "description": "Number of semantic cues used (SC).",
+      "minimum": 0,
+      "title": "Boston Naming Semantic Cues",
+      "type": "integer"
+    },
+    "boston_naming_phonemic_cues": {
+      "default": null,
+      "description": "Number of phonemic cues used (PC).",
+      "minimum": 0,
+      "title": "Boston Naming Phonemic Cues",
+      "type": "integer"
+    },
+    "boston_naming_notes": {
+      "default": null,
+      "description": "A summary of the test performance.",
+      "title": "Boston Naming Notes",
+      "type": "string"
+    },
+    "verbal_naming_total_score": {
+      "default": null,
+      "description": "Total score out of 55.",
+      "maximum": 55,
+      "minimum": 0,
+      "title": "Verbal Naming Total Score",
+      "type": "integer"
+    },
+    "verbal_naming_missed": {
+      "default": null,
+      "description": "Number of missed items.",
+      "minimum": 0,
+      "title": "Verbal Naming Missed",
+      "type": "integer"
+    },
+    "verbal_naming_phonemic_cues": {
+      "default": null,
+      "description": "Number of phonemic cues used (PC).",
+      "minimum": 0,
+      "title": "Verbal Naming Phonemic Cues",
+      "type": "integer"
+    },
+    "verbal_naming_notes": {
+      "default": null,
+      "description": "A summary of the test performance.",
+      "title": "Verbal Naming Notes",
+      "type": "string"
+    },
+    "gds_total_score": {
+      "default": null,
+      "description": "Total score out of 15.",
+      "maximum": 15,
+      "minimum": 0,
+      "title": "Gds Total Score",
+      "type": "integer"
+    },
+    "gds_notes": {
+      "default": null,
+      "description": "A summary of the results.",
+      "title": "Gds Notes",
+      "type": "string"
+    },
+    "gai_total_score": {
+      "default": null,
+      "description": "Total score out of 20.",
+      "maximum": 20,
+      "minimum": 0,
+      "title": "Gai Total Score",
+      "type": "integer"
+    },
+    "gai_notes": {
+      "default": null,
+      "description": "A summary of the results.",
+      "title": "Gai Notes",
+      "type": "string"
+    },
+    "lubben_total_score": {
+      "default": null,
+      "description": "Total score out of 30.",
+      "maximum": 30,
+      "minimum": 0,
+      "title": "Lubben Total Score",
+      "type": "integer"
+    },
+    "lubben_notes": {
+      "default": null,
+      "description": "A summary of the results.",
+      "title": "Lubben Notes",
+      "type": "string"
+    },
+    "ucla_loneliness_total_score": {
+      "default": null,
+      "description": "Total score out of 9.",
+      "maximum": 9,
+      "minimum": 0,
+      "title": "Ucla Loneliness Total Score",
+      "type": "integer"
+    },
+    "ucla_loneliness_notes": {
+      "default": null,
+      "description": "A summary of the results.",
+      "title": "Ucla Loneliness Notes",
+      "type": "string"
+    },
+    "behavioral_observations": {
+      "default": null,
+      "description": "Behavioral observations.",
+      "title": "Behavioral Observations",
+      "type": "string"
+    },
+    "history": {
+      "default": null,
+      "description": "History.",
+      "title": "History",
+      "type": "string"
+    },
+    "medications": {
+      "default": null,
+      "description": "List of current Medications.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Medications",
+      "type": "array"
+    },
+    "summary": {
+      "default": null,
+      "description": "Overall report summary.",
+      "title": "Summary",
+      "type": "string"
+    }
+  },
+  "title": "Report",
+  "type": "object"
+}
