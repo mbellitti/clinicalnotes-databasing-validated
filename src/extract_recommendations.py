@@ -1,13 +1,13 @@
 from pathlib import Path
 from vllm import LLM, SamplingParams
 import prompt_templates
-from nbse_report_schema_cerad import Report
+from recommendations_schema import Recommendations
 from itertools import batched
 
-prompt_template = prompt_templates.TABULAR_TEMPLATE_CERAD
+prompt_template = prompt_templates.RECOMMENDATIONS_TEMPLATE_SCHEMA
 
 txt_path = Path("data/NBSE_txt")
-output_path = Path("results/cerad_only/")
+output_path = Path("results/recommendations/")
 
 # Initialize vLLM
 model_name = "Qwen/Qwen3-32B" # this is the best at complying with schema
@@ -40,7 +40,7 @@ for batch in batched(txt_path.glob("*.txt"), 256):
         report_text = txt_file.read_text(encoding="utf-8")
 
         prompt = prompt_template.format(
-            schema=Report.model_json_schema(), report=report_text
+            schema=Recommendations.model_json_schema(), report=report_text
         )
 
         messages = [{"role": "user", "content": prompt}]

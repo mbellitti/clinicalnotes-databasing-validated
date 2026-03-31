@@ -11,14 +11,14 @@ import polars as pl
 
 from pydantic import BaseModel, ConfigDict
 import json
-from nbse_report_schema_cerad import Report
+from recommendations_schema import Recommendations
 
 from typing import Type
 import re
 
 base_path = Path("/projectnb/vkolagrp/bellitti/clinicalnotes-databasing-validated/")
 
-json_dir = base_path / "results/cerad_only"
+json_dir = base_path / "results/recommendations"
 
 log_file = base_path / "logs/validation_failures.log"
 
@@ -123,7 +123,7 @@ def main():
             print(f"Empty file {jsonfile}")
             continue
 
-        result = validate_and_clean_data(result, Report)
+        result = validate_and_clean_data(result, Recommendations)
 
         result = result.model_dump()
 
@@ -133,13 +133,10 @@ def main():
 
         results.append(result)
 
+
     df = pl.DataFrame(results)
 
-    df = df.with_columns(
-        pl.col("completed").cast(pl.Date),
-    ).drop('vac') # overwrite extracted vac column with one parsed by the filename
-
-    df.write_parquet(base_path/"results/CERAD_tabulated.parquet")
+    df.write_parquet(base_path/"results/recommendations_tabulated.parquet")
 
 if __name__ == "__main__":
     main()

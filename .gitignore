@@ -1,10 +1,11 @@
-data/
-
-# Environments
 .venv
+
+data/
 
 results/
 
 logs/
+
+excel_exports/
 
 __pycache__

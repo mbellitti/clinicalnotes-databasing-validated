@@ -105,7 +105,7 @@ class Report(BaseModel):
     # underlying_etiology: Union[List[str], None] = Field(description="List of underlying etiologies to consider.")
 
     neuropsychological_testing_recommended: Union[bool, None] = Field(description="True if the report summary recommends neuropsychological testing after this visit. False otherwise (Example: neuropsychological testing was in the past -> False).")
-    pet_recommended: Union[bool, None] = Field(description="True if the report summary requests or recommends amyloid PET. False otherwise.")
+    pet_recommended: Union[bool, None] = Field(description="True if the report summary requests or recommends amyloid PET, aPET, or florbetapir PET. False otherwise.")
     
 
 

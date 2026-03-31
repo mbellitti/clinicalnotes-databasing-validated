@@ -55,6 +55,39 @@ Neurobehavioral Report:
 
 """
 
-# - If Boston Naming Test (BNT) is present, the encounter type is either in-person or VVC.
-# - If Verbal Naming Test (VNT) is present, the encounter type is telephone.
-# Copy notes and comments from the report exactly as written to the appropriate keys.
+TABULAR_TEMPLATE_CERAD = """Your task is to extract information from a Neurobehavioral Report into JSON format. 
+Use 'null' if you cannot safely determine the value of a key. You must output valid JSON.
+Comply with the provided JSON schema. Do not use extra keys, do not include extra information. Pay attention to the field descriptions.
+
+Dates will be provided in USA month-first format: mm/dd/yy or mm.dd.yy, convert them to ISO format yyyy-mm-dd
+
+JSON Schema:
+
+```
+{schema}
+```
+
+Neurobehavioral Report:
+
+{report}
+
+"""
+
+
+RECOMMENDATIONS_TEMPLATE_SCHEMA = """Your task is to extract clinical recommendations from a neurobehavioral report, and convert them to JSON.
+
+Use 'null' if you cannot safely determine the value of a key. You must output valid JSON.
+
+Comply with the provided JSON schema. Do not use extra keys, do not include extra information. Pay attention to the field descriptions.
+
+JSON Schema:
+
+```
+{schema}
+```
+
+Neurobehavioral Report:
+
+{report}
+
+"""
