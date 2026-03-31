@@ -1,4 +1,7 @@
 # Databasing clinical notes via local LLM
+
+[![DOI](https://zenodo.org/badge/1046313758.svg)](https://doi.org/10.5281/zenodo.19362131)
+
 This project uses an LLM to extract tabular data from Neurobehavioral State
 Examination (NBSE) reports. While it does not use guided decoding, it still
 provides the LLM with a JSON schema automatically generated from a pydantic
